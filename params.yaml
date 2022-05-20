@@ -1,5 +1,5 @@
 train:
-  epoches: 10
+  epochs: 10
   batch_size: 128
   split: .1
 model:
