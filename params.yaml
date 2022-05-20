@@ -1,6 +1,6 @@
 train:
   epoches: 10
-  batch_size:128
+  batch_size: 128
   split: .1
 model:
   layers: 3
