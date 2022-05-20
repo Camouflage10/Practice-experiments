@@ -1,4 +1,4 @@
 #!/bin/sh
 # This is a comment!
-ipynb-py-convert get_state.ipynb get_state.py
-ipynb-py-convert RLStock.ipynb RLStock.py
+ipynb-py-convert expCNN.ipynb espCNN.py
+ipynb-py-convert gridsearch_dvc.ipynb gridsearch_dvc.py
