@@ -14,7 +14,7 @@ stages:
       - params.yaml
     outs:
       - metrics.txt
-      - plot.png
+      - cm.png
     metrics:
       - metrics.json:
           cache: false
