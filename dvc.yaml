@@ -1,1 +1,22 @@
-
+stages:
+  nb-to-py:
+    cmd: bash convert.sh
+    deps:
+      - expCNN.ipynb
+      - gridsearch_dvc.ipynb
+    outs:
+      - expCNN.py
+      - gridsearch_dvc.py
+  get-state-pred:
+    cmd: python expCNN.py
+    deps:
+      - expCNN.py
+      - params.yaml
+    outs:
+      - metrics.txt
+      - plot.png
+    metrics:
+      - metrics.json:
+          cache: false
+      - score.json:
+          cache: false
