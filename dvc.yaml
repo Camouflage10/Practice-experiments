@@ -18,5 +18,3 @@ stages:
     metrics:
       - metrics.json:
           cache: false
-      - score.json:
-          cache: false
