@@ -16,6 +16,9 @@ jobs:
             dvc repro
             git fetch --prune
             
+            #python gridsearch_dvc.py
+            #dvc exp run --run-all
+            #dvc exp show
             dvc metrics diff --show-md main > report.md
             
             echo "## confusion matrix" >> report.md
