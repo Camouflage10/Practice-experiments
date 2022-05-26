@@ -13,12 +13,13 @@ jobs:
         run: |
             git config --global --add safe.directory /__w/Practice-experiments/Practice-experiments
             pip install -r require.txt
-            dvc repro
-            git fetch --prune
+            bash convert.sh
             
-            dvc metrics diff --show-md main > report.md
+            dvc remove exp --all --queue
+            pip gridsearch_dvc.py
+            dvc exp run --run-all
             
-            echo "## confusion matrix" >> report.md
-            cml publish cm.png --md >> report.md
-            
+            echo "## Experiments" >> report.md
+            dvc exp show -A --md >> report.md
+  
             cml send-comment report.md
