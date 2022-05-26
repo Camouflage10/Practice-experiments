@@ -15,11 +15,11 @@ jobs:
             pip install -r require.txt
             bash convert.sh
             
+            echo "## Experiments" >> report.md
+            dvc exp show -A --md >> report.md
+            cml send-comment report.md
+            
             dvc exp remove --all --queue
             python gridsearch_dvc.py
             #dvc exp run --run-all
             
-            echo "## Experiments" >> report.md
-            #dvc exp show -A --md >> report.md
-  
-            cml send-comment report.md
