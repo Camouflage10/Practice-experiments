@@ -15,9 +15,9 @@ jobs:
             pip install -r require.txt
             bash convert.sh
             
-            #dvc remove exp --all --queue
-            #pip gridsearch_dvc.py
-            #dvc exp run --run-all
+            dvc remove exp --all --queue
+            pip gridsearch_dvc.py
+            dvc exp run --run-all
             
             echo "## Experiments" >> report.md
             #dvc exp show -A --md >> report.md
