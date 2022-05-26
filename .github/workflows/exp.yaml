@@ -1,4 +1,4 @@
-name: check_pipe
+name: queue_experiments
 on:
   push:
 jobs:
