@@ -16,9 +16,9 @@ jobs:
             bash convert.sh
             
             dvc exp remove --all --queue
-            dvc exp run --queue --set-param train.epochs=10 --set-param model.layers=1 --set-param model.dropout=0.1
+            #dvc exp run --queue --set-param train.epochs=10 --set-param model.layers=1 --set-param model.dropout=0.1
             #python gridsearch_dvc.py
-            dvc exp run --run-all
+            #dvc exp run --run-all
             
             echo "## Experiments" >> report.md
             #dvc exp show -A --md >> report.md
